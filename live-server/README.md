@@ -8,7 +8,7 @@ There are already great live-server solutions available, so this project is not 
 
 You can see the demo here:
 
-[LinkedIn Demo Post](https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7480776347200622592?compact=1)
+[Video Demo ](https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7480776347200622592?compact=1)
 
 ## What is the purpose of a live server?
 
