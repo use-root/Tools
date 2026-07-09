@@ -4,6 +4,13 @@ The goal of this project is to build my own lightweight live development server 
 
 There are already great live-server solutions available, so this project is not about replacing them or reinventing the wheel. The main purpose is learning: understanding how file watching, HTTP servers, WebSockets, and browser synchronization work together.
 
+## Demo
+
+You can see the demo here:
+
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7480776347200622592?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+[LinkedIn Demo Post](https://www.linkedin.com/...)
+
 ## What is the purpose of a live server?
 
 A live server mainly has three important parts:
