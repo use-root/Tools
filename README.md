@@ -22,23 +22,4 @@ Some projects may start as experiments, but each one is an opportunity to learn 
 
 ### Live Server with Hot Reload
 
-A lightweight live development server built for my personal Neovim workflow.
-
-The goal was to understand how live reload tools work internally by building the main components:
-
-- HTTP server for serving files
-- File watcher for detecting changes
-- WebSocket communication for browser synchronization
-
-Technologies:
-
-- Node.js
-- HTTP
-- WebSockets
-- Chokidar
-- JavaScript
-
-Repository:
-[my-live-server](./my-live-server)
-
----
+- [Live Server README](./live-server/README.md)
