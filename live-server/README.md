@@ -8,8 +8,7 @@ There are already great live-server solutions available, so this project is not 
 
 You can see the demo here:
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7480776347200622592?compact=1" height="399" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-[LinkedIn Demo Post](https://www.linkedin.com/...)
+[LinkedIn Demo Post](https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7480776347200622592?compact=1)
 
 ## What is the purpose of a live server?
 
