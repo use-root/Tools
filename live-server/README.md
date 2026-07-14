@@ -1,8 +1,9 @@
+**This project is still evolving. There are some improvements and bugs to fix, but it already provides the core functionality of serving files and automatically reloading the browser when changes are detected.**
+
 # Build My Own Live Server with Hot Reload
 
-The goal of this project is to build my own lightweight live development server and understand how the tools I use every day work internally.
-
-There are already great live-server solutions available, so this project is not about replacing them or reinventing the wheel. The main purpose is learning: understanding how file watching, HTTP servers, WebSockets, and browser synchronization work together.
+The goal of this project is to build my own lightweight live development server.
+The main purpose is learning: understanding how file watching, HTTP servers, WebSockets, and browser synchronization work together.
 
 ## Demo
 
@@ -41,7 +42,7 @@ Example flow:
      HTTP Server           WebSocket Server
          │                        ▲
          ▼                        │
-   Sirve index.html         Envía "reload"
+   Serves index.html         Send "reload"
          │                        ▲
          ▼                        │
       Browser          File Watcher (chokidar)
@@ -55,31 +56,3 @@ Example flow:
 3. When a file changes, the watcher notifies the WebSocket server.
 4. The WebSocket server sends a reload message to the connected browser.
 5. The browser refreshes automatically.
-
-## Technologies
-
-- Node.js
-- HTTP
-- WebSockets
-- Chokidar
-- File System APIs
-- JavaScript
-
-## Why I built this
-
-I wanted a live development server that fits my personal Neovim workflow.
-
-The main reason behind this project was not to create a better alternative to existing tools, but to understand how these tools work internally and build something simple that I can fully control.
-
-While building this project, I learned more about networking concepts, real-time communication, file watching, and the architecture behind live reload development tools.
-
-## Current Status
-
-This project is still evolving. There are some improvements and bugs to fix, but it already provides the core functionality of serving files and automatically reloading the browser when changes are detected.
-
-## Future Improvements
-
-- Improve error handling
-- Add better configuration options
-- Improve browser communication
-- Add more development workflow features
