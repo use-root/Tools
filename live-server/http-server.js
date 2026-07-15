@@ -1,4 +1,3 @@
-// librerias
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
@@ -8,8 +7,8 @@ const ws = require("ws");
 const clients = new Set();
 const root = prc.cwd();
 
-const PORT = prc.argv[2] || 5001;
-const FILE = prc.argv[3] || "index.html";
+const PORT = prc.argv[2];
+const FILE = prc.argv[3];
 
 const injectedScript = `
 <script>
@@ -22,7 +21,6 @@ const injectedScript = `
       }
     };
 
-
    ws.onopen = () => console.log("WS OPEN");
    ws.onerror = (e) => console.log("WS ERROR", e);
   })();
@@ -30,11 +28,10 @@ const injectedScript = `
 `;
 
 const server = http.createServer((req, res) => {
-  console.log("Request:", req.url);
-
   let filePath = req.url === "/" ? "/" + FILE : req.url;
 
   const fullPath = path.join(root, filePath);
+  const relativePath = path.relative(root, filePath);
 
   fs.readFile(fullPath, (err, data) => {
     if (err) {
@@ -43,25 +40,37 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-    const ext = path.extname(fullPath);
+    const ext = path.extname(fullPath).toLowerCase();
 
-    let contentType = "text/plain";
-    let content = data.toString();
+    const mimeTypes = {
+      ".html": "text/html",
+      ".css": "text/css",
+      ".js": "application/javascript",
+      ".png": "image/png",
+      ".jpg": "image/jpeg",
+      ".jpeg": "image/jpeg",
+      ".gif": "image/gif",
+      ".webp": "image/webp",
+      ".svg": "image/svg+xml",
+    };
+    const contentType = mimeTypes[ext] || "application/octet-stream";
 
     if (ext === ".html") {
-      contentType = "text/html";
+      let content = data.toString();
 
       if (content.includes("</body>")) {
         content = content.replace("</body>", `${injectedScript}</body>`);
       } else {
         content += injectedScript;
       }
+
+      res.writeHead(200, { "Content-Type": contentType });
+      res.end(content);
+      return;
     }
-    if (ext === ".css") contentType = "text/css";
-    if (ext === ".js") contentType = "application/javascript";
 
     res.writeHead(200, { "Content-Type": contentType });
-    res.end(content);
+    res.end(data);
   });
 });
 
