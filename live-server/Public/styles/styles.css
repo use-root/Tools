@@ -1,0 +1,8 @@
+body {
+  background-color: #151515;
+  color: gray;
+}
+
+section {
+  outline: solid red 2px;
+}
