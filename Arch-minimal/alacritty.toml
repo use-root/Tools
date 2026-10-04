@@ -1,0 +1,65 @@
+[window]
+decorations= "None"
+padding = {x=7,y=7}
+opacity= 0.5
+
+[font]
+size = 7.25
+
+[font.normal]
+
+family="Hack Nerd Font Mono"
+
+[font.bold]
+
+family="Hack Nerd Font Mono"
+
+[font.italic]
+
+family="Hack Nerd Font Mono"
+
+[font.bold_italic]
+
+family="Hack Nerd Font Mono"
+
+[colors.primary]
+background = "#0c0c0c"
+foreground = "#d0d0d0"
+
+[colors.cursor]
+text = "#0c0c0c"
+cursor = "#b8b8b8"
+
+[colors.selection]
+text = "#e0e0e0"
+background = "#292929"
+
+[colors.normal]
+black = "#171717"
+red = "#c96b6b"
+green = "#86a878"
+yellow = "#c0a76b"
+blue = "#7189a8"
+magenta = "#9b7fa3"
+cyan = "#719b9a"
+white = "#c7c7c7"
+
+[colors.bright]
+black = "#303030"
+red = "#df8080"
+green = "#a2c293"
+yellow = "#d5bd7e"
+blue = "#8da7c7"
+magenta = "#b495bc"
+cyan = "#8bbdbc"
+white = "#eeeeee"
+
+[[keyboard.bindings]]  
+key = "i"  
+mods = "Control"  
+action = "Copy"  
+  
+[[keyboard.bindings]]  
+key = "v"  
+mods = "Control"  
+action = "Paste"
