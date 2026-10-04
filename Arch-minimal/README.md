@@ -2,8 +2,8 @@
   <h1>Arch Linux Minimal</h1>
   <p align="center">
         This is my workflow for develoment and hacking. <br>
-        If you'd like to see a technical explanation... please check out my 
         There’s more behind the code. Explore my ideas, experiments, and thoughts on the <a href="https://use-root.github.io/zeroot.github.io/"><b>BLOG</b></a>
+
   </p>
 <ul>
 </div>
