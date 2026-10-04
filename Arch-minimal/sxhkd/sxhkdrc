@@ -1,0 +1,84 @@
+#
+# Browsers
+#
+super + p
+	packettracer &>/dev/null &
+
+# Obsidian
+super + o
+	/usr/bin/obsidian  &>/dev/null &
+
+# Brave
+super + b 
+	/usr/bin/brave &>/dev/null &
+
+# KVM + Virt-manager
+super + shift + v
+	virt-manager &>/dev/null &
+
+# Terminal Emulator
+super + Return
+	/usr/bin/alacritty  &>/dev/null &
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Change profile of use of my cpu: Balanced (Normal)
+super + n
+	powerprofilesctl set balanced
+
+# Change profile of use of my cpu: Performance (Dev)
+super + v 
+	powerprofilesctl set performance
+
+# quit/restart bspwm
+super + shift + {q,r}
+	bspc {quit,wm -r}	 
+
+# close and kill
+super + {_,shift + }w
+	bspc node -{c,k}
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# move/resize
+super + alt + {h,j,k,l}
+	~/.config/bspwm/scripts/bspwm_resize.sh {west,south,north,east} &
+
+super + alt + {u,d}
+	~/.config/bspwm/scripts/brightness_control.sh {up, down} &
