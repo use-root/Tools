@@ -1,0 +1,9 @@
+[[keyboard.bindings]]  
+key = "c"  
+mods = "Control"  
+action = "Copy"  
+  
+[[keyboard.bindings]]  
+key = "v"  
+mods = "Control"  
+action = "Paste"
