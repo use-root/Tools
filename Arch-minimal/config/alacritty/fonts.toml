@@ -1,0 +1,19 @@
+[font]
+size = 9
+
+[font.normal]
+
+family="Hack Nerd Font Mono"
+
+[font.bold]
+
+family="Hack Nerd Font Mono"
+
+[font.italic]
+
+family="Hack Nerd Font Mono"
+
+[font.bold_italic]
+
+family="Hack Nerd Font Mono"
+
