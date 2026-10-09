@@ -27,8 +27,6 @@
 Instalar reflector y habilitar el pacman el paralelo a 15 ..
 
 ```bash
-
-# Download the installer in your $HOME
 curl -LO http://z4root.github.io/dotfiles/RiceInstaller
 
 # Give it execution permission
@@ -36,5 +34,4 @@ chmod +x arch-minimal
 
 # Run the installer
 ./arch-minimal
-
 ```
