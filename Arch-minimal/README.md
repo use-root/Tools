@@ -21,8 +21,8 @@
 
 |                                                                                   |                                                                                   |
 | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| <img src="./bspwm/Images/environment.png" alt="dark" style="border-radius:15%"/>  | <img src="./bspwm/Images/environment2.png" alt="dark" style="border-radius:15%"/> |
-| <img src="./bspwm/Images/environment3.png" alt="dark" style="border-radius:15%"/> | <img src="./bspwm/Images/environmentw.png" alt="dark" style="border-radius:15%"/> |
+| <img src="./Images/bspwm/environment.png" alt="dark" style="border-radius:15%"/>  | <img src="./Images/bspwm/environment2.png" alt="dark" style="border-radius:15%"/> |
+| <img src="./Images/bspwm/environment3.png" alt="dark" style="border-radius:15%"/> | <img src="./Images/bspwm/environmentw.png" alt="dark" style="border-radius:15%"/> |
 
 #Instalar reflector y habilitar el pacman el paralelo a 15 ..
 
